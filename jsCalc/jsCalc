@@ -1,0 +1,37 @@
+function test() {
+    let numInt1 = getNumber();
+    let numInt2 = getNumber();
+
+    add();
+        console.log(numInt1 + "+" + numInt2 +" "+ "equals " + sum);
+
+    subtract();
+        console.log(numInt1 + "-" + numInt2 +" "+ "equals " + diff);
+
+    multiply();
+        console.log(numInt1 + "*" + numInt2 +" "+ "equals " + prod);
+    
+    divide();
+        console.log(numInt1 + "/" + numInt2 +" "+"equals " + q);
+
+    
+
+function add() {
+    sum = numInt1 + numInt2;
+    return sum;
+}
+function subtract() {
+    diff = numInt1 - numInt2;
+    return diff;
+}
+function multiply() {
+    prod = numInt1 * numInt2;
+    return prod;
+}
+function divide() {
+    q = numInt1 / numInt2;
+    return q;
+}
+
+
+}

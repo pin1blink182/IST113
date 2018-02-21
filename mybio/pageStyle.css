@@ -1,3 +1,11 @@
 *{
 	font-family: arial;
 }
+
+p{
+	color: gray;
+}
+
+h1, h2, h3{
+	font-family: cambria;
+	font-size: 24px;

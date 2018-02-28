@@ -1,10 +1,9 @@
-function GameStart(){
-	var secretnum = prompt("Player one enter a secret number: ");
+function gameStart(){
+		var secretnum = prompt("Player one enter a secret number: ");
 	let number = parseInt(secretnum);
 	document.write(number);
-	let guess = prompt("Player two please begin to guess");
-	let guessInt = parseInt(guess);
-	var counter=1;
+	var guess = prompt("Player two please begin to guess");
+		var counter=1;
 	while (guess != number) {
 		if (guess < number){
 			guess = prompt("You've guessed too high! Keep guessing!);
@@ -16,3 +15,4 @@ function GameStart(){
 		}
 	}
 	alert("Congratulations! It took you " +counter +" guesses");
+}

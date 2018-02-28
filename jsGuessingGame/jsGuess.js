@@ -1,5 +1,5 @@
 function gameStart(){
-		var secretnum = prompt("Player one enter a secret number: ");
+	var secretnum = prompt("Player one enter a secret number: ");
 	let number = parseInt(secretnum);
 	document.write(number);
 	var guess = prompt("Player two please begin to guess");

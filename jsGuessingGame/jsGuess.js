@@ -5,12 +5,12 @@ function gameStart(){
 	var guess = prompt("Player two please begin to guess");
 		var counter=1;
 	while (guess != number) {
-		if (guess < number){
-			guess = prompt("You've guessed too high! Keep guessing!);
+		if (guess > number){
+			guess = prompt("You've guessed too high! Keep guessing!");
 			counter++;
 		}
-		if (guess > number) {
-			guess = prompt("You've guessed too low! Try again!);
+		if (guess < number) {
+			guess = prompt("You've guessed too low! Try again!");
 			counter++;
 		}
 	}

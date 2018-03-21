@@ -1,0 +1,29 @@
+.lightswitch {
+	float: right;
+	background-color: green;
+	height: 400px;
+	width: 100px;
+	z-index: 2;
+	border: 2px solid gray;
+	overflow: hidden;
+}
+
+.background {
+	width: 200px;
+	height: 400px;
+	background-color: #F0F0F0;
+	margin: auto;
+	margin-top: 300px;
+	border: 2px solid gray;
+}
+
+button {
+	width: 100px;
+	height: 40px;
+	margin: auto;
+	margin-top: 180px;
+}
+
+.body {
+	background-color: black;
+}

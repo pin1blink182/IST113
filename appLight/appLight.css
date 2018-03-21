@@ -1,0 +1,13 @@
+button {
+  width: 40px;
+  height: 40px;
+  /*float: right;*/
+}
+
+div {
+  width: 200px;
+  height: 40px;
+  background-color: blue;
+  border: 2px solid black;
+  margin: 25% auto;
+}

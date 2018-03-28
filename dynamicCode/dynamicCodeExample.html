@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <title>appTask1</title>
+</head>
+<!--Static Version-->
+<div>Static Version:</div>
+<body>
+     <table border="1">
+          <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+          </tr>
+          <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+          </tr>
+     </table>
+
+<!--Dynamic Version-->
+<div>Dynamic Version:</div>
+
+     <script>
+          var table = ' ';
+          var rows = 10;
+          var cols = 10;
+          for(var r = 1; r < rows; r++) {
+               table += '<tr>';
+                    for(var c = 1;c < cols; c++) {
+                         table += '<td>' + c + '</td>';
+                    }
+                    table += '<tr>';
+          }
+          document.write('<table border=1>' + table + '</table>');
+     </script>
+</body>
+</html>

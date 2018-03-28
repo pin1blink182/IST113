@@ -30,4 +30,14 @@ function setupLocal() {
     myItems.push(curVal);
     saveItems();
   });
+
+  function createItem(itemValue) {
+    $newElem = $("<li></li>").text(itemValue);
+
+    $newElem.on("click", function() {
+      removeItem(this);
+    });
+
+    $("#listOne").append($newElem);
+  }
 }

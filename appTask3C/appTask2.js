@@ -57,7 +57,7 @@ function setupLocal() {
     localStorage.setItem(myKey, myItemString)
   }
 
-  $(function) {
+  $(function() {
     setupLocal();
-  }
+  });
 }

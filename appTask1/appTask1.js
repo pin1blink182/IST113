@@ -4,7 +4,7 @@ var table = document.getElementById("table");
 function checkEmptyInput(){
      var isEmpty = false,
      fname = document.getElementById("fname").value,
-     lname = document.getElementById("lname").value,
+     lname = document.getElementById("lname").value;
 
      if(fname === ""){
           alert("First Name Connot Be Empty");

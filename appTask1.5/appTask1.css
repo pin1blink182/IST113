@@ -1,0 +1,36 @@
+label {
+  width: auto;
+  display: inline-block;
+}
+
+fieldset {
+  width: 50% auto;
+}
+
+div {
+  background-color: blue;
+  width: 40%;
+  margin-top: 25%;
+  margin-left: 35%;
+}
+
+li button {
+  margin-left: 50px;
+}
+
+.buttonElement {
+  float: right;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}

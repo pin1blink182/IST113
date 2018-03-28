@@ -1,41 +1,33 @@
-/*
- Let's update our functions to use jQuery to manipulate DOM nodes
-*/
-function testDom() {
+var myKey = "listValues"
+var myItems = [];
 
-  // We'll add a listener to our create element button
-  $("#buttonAdd").on("click", function() {
+//Local storage
+function setupLocal() {
 
-    // pulling elements from our array
-    let classValue = $("#inputClass").val();
-    let contentValue = $("#inputContent").val();
+  //check to see if an item has already been created with same id
+  if(localStorage.getItem(myKey) !== null) {
 
-    // jQuery element creation uses HTML tags
-    // We'll set the text value when we create the object
-    $newElem = $("<li></li>").text(contentValue);
+    //take a string value
+    let myItemsString = localStorage.getItem(myKey);
 
-    // we can add click listeners as well
-    // in this case, we're going to make each new item removable
-    $newElem.on("click", function() {
+    //Convert string to array
+    myItems - JSON.parse(myItemsString);
 
-	  $(this).remove();
-
+    $(myItems).each(function(){
+      createItem(this);
     });
+  }
+  else {
+    createItem("List One Item");
+  }
 
-    // then we can add a class
-    // $newElem.addClass(classValue);
+  //listener
+  $("#buttonAdd").on("click", function(){
+    //pull values
+    let curVal = $("#inputContent").val();
 
-    // we have an element, but it isn't part of the DOM yet.
-    // For now, we'll append it to the end of our page div
-    $("#listOne").append($newElem);
-  });
-
-  // We'll add a listener to our swap button
-  $("#deletebutton").on("click", function() {
-
-    let $lastItem = $("#listOne li:last").remove();
-
+    createItem(curVal);
+    myItems.push(curVal);
+    saveItems();
   });
 }
-
-testDom();

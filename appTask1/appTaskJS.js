@@ -1,7 +1,3 @@
-
-
-
-
 var rIndex;
 var table = document.getElementById("table");
 // check the empty input

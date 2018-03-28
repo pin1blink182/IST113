@@ -4,7 +4,7 @@
 function testDom() {
 
   // We'll add a listener to our create element button
-  $("#buttonElement").on("click", function() {
+  $("#buttonAdd").on("click", function() {
 
     // pulling elements from our array
     let classValue = $("#inputClass").val();
@@ -36,14 +36,6 @@ function testDom() {
     let $lastItem = $("#listOne li:last").remove();
 
   });
-
-  // jQuery's each function will let us run the same
-  //   function across all selected elements
- /* $("#buttonEach").on("click", function() {
-    $("#listTwo li").each(function() {
-      $(this).detach().appendTo("#listOne");
-    });
-  });*/
 }
 
 testDom();

@@ -1,0 +1,26 @@
+label {
+  width: 150px;
+  display: inline-block;
+}
+
+fieldset {
+  width: 400px;
+}
+
+div {
+  background-color: green;
+  overflow: hidden;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}

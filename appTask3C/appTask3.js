@@ -34,11 +34,12 @@ function setupLocal() {
     // finally, save our array to local storage
     saveItems();
   });
+}
+
 
   $("#deleteButton").on("click", function(){
     let $lastItem = $("#listOne li:last").removeItem();
   }
-}
 
 
 // Making our element creation a separate function

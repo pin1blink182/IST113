@@ -34,9 +34,9 @@ function setupLocal() {
     // finally, save our array to local storage
     saveItems();
   });
-  
+
   $("#deleteButton").on("click", function(){
-    let $lastItem = $("#listOne li:last").remove();
+    let $lastItem = $("#listOne li:last").removeItem();
   }
 }
 

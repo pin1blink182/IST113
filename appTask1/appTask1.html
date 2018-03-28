@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <title>appTask1</title>
+</head>
+<body>
+     <table border="1">
+          <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+          </tr>
+          <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+          </tr>
+     </table>
+
+     <script>
+          var table = ' ';
+          for(var r = 0; r < rows; r++) {
+               table += '<tr>';
+                    for(var c = 0;c < cols; c++) {
+                         table += '<td>' + c + '</td>';
+                    }
+                    table += '<tr>';
+          }
+          document.write('<table border=1>' + table + '</table>');
+</body>
+</html>

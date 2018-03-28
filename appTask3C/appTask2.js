@@ -54,7 +54,7 @@ function setupLocal() {
 
   function saveItems() {
     let myItemsString = JSON.stringify(myItems);
-    localStorage.setItem(myKey, myItemString)
+    localStorage.setItem(myKey, myItemsString)
   }
 
   $(function() {

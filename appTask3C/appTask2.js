@@ -36,6 +36,8 @@ function setupLocal() {
   });
 }
 
+$("deleteButton").on("click", function(removeItem));
+
 // Making our element creation a separate function
 function createItem(itemValue) {
   // create the list item

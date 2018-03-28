@@ -40,4 +40,24 @@ function setupLocal() {
 
     $("#listOne").append($newElem);
   }
+
+  function removeItem(item) {
+    let itemText = $(item).text();
+    let index = myItems.indexOf(itemText);
+
+    if(index != -1){
+      myItems.splice(index, 1);
+      saveItems();
+    }
+    $(item).remove();
+  }
+
+  function saveItems() {
+    let myItemsString = JSON.stringify(myItems);
+    localStorage.setItem(myKey, myItemString)
+  }
+
+  $(function) {
+    setupLocal();
+  }
 }

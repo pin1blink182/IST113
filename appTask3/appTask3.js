@@ -96,7 +96,7 @@ function deleteAllTasks() {
 //  Create a function to store the task array to local storage
 function saveTasks() {
      //  Create a variable to store the array of taskItems
-     let taskString = JSON.stringify(taskItems);
+     let taskString = JSON.stringify(tItems);
 
      //  Add the item to the storage array
      localStorage.setItem(tKey, taskString);

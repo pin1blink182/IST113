@@ -4,7 +4,11 @@ var table = document.getElementById("table");
 function checkEmptyInput(){
      var isEmpty = false,
      fname = document.getElementById("fname").value,
+<<<<<<< HEAD:appTask1/appTaskJS.js
      lname = document.getElementById("lname").value,
+=======
+     lname = document.getElementById("lname").value;
+>>>>>>> e23a69c1d4b6a4a4d57481b883f97b2ccc270240:appTask1/appTask1.js
 
      if(fname === ""){
           alert("First Name Connot Be Empty");
@@ -14,7 +18,11 @@ function checkEmptyInput(){
           alert("Last Name Connot Be Empty");
           isEmpty = true;
      }
+<<<<<<< HEAD:appTask1/appTaskJS.js
      return isEmpty;
+=======
+      return isEmpty;
+>>>>>>> e23a69c1d4b6a4a4d57481b883f97b2ccc270240:appTask1/appTask1.js
  }
 
 function addHtmlTableRow() {
@@ -27,7 +35,11 @@ function addHtmlTableRow() {
           cell1 = newRow.insertCell(0),
           cell2 = newRow.insertCell(1),
           fname = document.getElementById("fname").value,
+<<<<<<< HEAD:appTask1/appTaskJS.js
           lname = document.getElementById("lname").value,
+=======
+          lname = document.getElementById("lname").value;
+>>>>>>> e23a69c1d4b6a4a4d57481b883f97b2ccc270240:appTask1/appTask1.js
 
            cell1.innerHTML = fname;
            cell2.innerHTML = lname;
@@ -53,10 +65,18 @@ selectedRowToInput();
 
 function editHtmlTbleSelectedRow() {
      var fname = document.getElementById("fname").value,
+<<<<<<< HEAD:appTask1/appTaskJS.js
      lname = document.getElementById("lname").value,
           if(!checkEmptyInput()){
                 table.rows[rIndex].cells[0].innerHTML = fname;
                 table.rows[rIndex].cells[1].innerHTML = lname;
+=======
+     lname = document.getElementById("lname").value;
+          if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = fname;
+                table.rows[rIndex].cells[1].innerHTML = lname;
+
+>>>>>>> e23a69c1d4b6a4a4d57481b883f97b2ccc270240:appTask1/appTask1.js
               }
 }
 

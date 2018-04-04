@@ -102,15 +102,18 @@ function saveTasks() {
      localStorage.setItem(tKey, taskString);
 }//  End function saveTasks
 
-/*function toggleHide(){
-  $('#myForm');
-  if ($myForm.style.display === "none") {
-    myForm.style.display = "block";
+function toggleHide(){
+  if (myForm.style.display === "none") {
+    $("#myForm").show();
   }
   else {
-    myForm.style.display = "none";
+    $("#myForm").hide();
   }
-}*/
+}
+
+$('#myFormButton').on(click) function(){
+  toggleHide();
+}
 //  Call the pageLoad function once the page is loaded
 $(function() {
      pageLoad();

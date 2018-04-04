@@ -1,0 +1,53 @@
+/*  Remove any browser default styling*/
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+/*  Center the main window in the browser*/
+#appMainWindow {
+    width: 45%;
+    background-color: purple;
+    margin-top: 25%;
+    margin-left: 25%;
+    border-radius: 15px;
+}
+
+#title {
+    text-align: center;
+    font-family: "Sans-serif";
+}
+
+#taskHeader {
+  margin-top: 2%;
+}
+
+#buttonAddTask {
+  margin-left: 5%;
+}
+
+#buttonDeleteAll {
+  margin-left: 5%
+}
+
+fieldset {
+    margin-top: 2%;
+    border: 1px solid black;
+    width: 98%;
+    background-color: gray;
+
+}
+
+button {
+  margin-left: 5%;
+  border-radius: 10px;
+}
+
+li {
+  margin-left: 20px;
+}
+
+label {
+  font-family: "Sans-serif";
+}

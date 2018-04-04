@@ -87,7 +87,7 @@ function deleteAllTasks() {
      $('#taskList').empty();
 
      //  Clear the storage array of tasks
-     taskItems = [];
+     tItems = [];
 
      //  Save the empty storage array
      saveTasks();
@@ -103,17 +103,13 @@ function saveTasks() {
 }//  End function saveTasks
 
 function toggleHide(){
-  if (myForm.style.display === "none") {
-    $("#myForm").show();
-  }
-  else {
-    $("#myForm").hide();
-  }
+  $("#myForm").toggle();
+  console.log("running toggleHide");
 }
 
-$('#myFormButton').on(click) function(){
-  toggleHide();
-}
+$("#myFormButton").on("click", function() {
+  toggleHide(); }
+);
 //  Call the pageLoad function once the page is loaded
 $(function() {
      pageLoad();

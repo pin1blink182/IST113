@@ -51,3 +51,7 @@ li {
 label {
   font-family: "Sans-serif";
 }
+
+input {
+  margin: auto;
+}

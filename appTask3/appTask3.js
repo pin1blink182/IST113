@@ -87,7 +87,7 @@ function deleteAllTasks() {
      $('#taskList').empty();
 
      //  Clear the storage array of tasks
-     taskItems = [];
+     tItems = [];
 
      //  Save the empty storage array
      saveTasks();

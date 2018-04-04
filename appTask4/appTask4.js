@@ -102,7 +102,7 @@ function saveTasks() {
      localStorage.setItem(tKey, taskString);
 }//  End function saveTasks
 
-function toggleHide(){
+/*function toggleHide(){
   $('#myForm');
   if ($myForm.style.display === "none") {
     myForm.style.display = "block";
@@ -110,7 +110,7 @@ function toggleHide(){
   else {
     myForm.style.display = "none";
   }
-}
+}*/
 //  Call the pageLoad function once the page is loaded
 $(function() {
      pageLoad();

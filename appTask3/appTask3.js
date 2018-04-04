@@ -67,7 +67,7 @@ function removeTask(task) {
      //  slice functions removes selected values
      let taskTextFiltered = taskText.slice(0, -9);
      // index is created at the point of the task item selected
-     let index = taskItems.indexOf(taskTextFiltered);
+     let index = tItems.indexOf(taskTextFiltered);
 
      //  Remove task from array at point INDEX so long as it is actually there
      if(index != -1) {

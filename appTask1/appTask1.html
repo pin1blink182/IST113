@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='stylesheet' src="appTask1\appTaskStyle.css">
+		<style>
+			tr:hover{
+				background-color:#EEE;cursor: pointer;
+				}
 
-        <link href='stylesheet' src="C:\Users\Meech\Documents\GitHub\IST113\appTask1\appTaskStyle.css">
-        <script type="text/javascript" src="C:\Users\Meech\Documents\GitHub\IST113\appTask1\appTaskJS.js"></script>
+			.container{
+				overflow: hidden;
+				}
+
+			.tab{
+				float: left;
+				}
+
+			.tab-2{
+				margin-left: 50px;
+				}
+
+			.tab-2 input{
+				display: block;margin-bottom: 10px;
+				}
+
+			tr{
+				transition:all .25s ease-in-out;
+			}
+	</style>
     </head>
     <body>
        <title>appTask1</title>
@@ -13,34 +38,100 @@
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th>Age</th>
                     </tr>
                     <tr>
                         <td>A1</td>
                         <td>B1</td>
-                        <td>10</td>
                     </tr>
                     <tr>
                         <td>A3</td>
                         <td>B3</td>
-                        <td>30</td>
                     </tr>
                     <tr>
                         <td>A2</td>
                         <td>B2</td>
-                        <td>20</td>
                     </tr>
                 </table>
             </div>
             <div class="tab tab-2">
                 First Name :<input type="text" name="fname" id="fname">
                 Last Name :<input type="text" name="lname" id="lname">
-                Age :<input type="number" name="age" id="age">
 
                 <button onclick="addHtmlTableRow();">Add</button>
                 <button onclick="editHtmlTbleSelectedRow();">Edit</button>
                 <button onclick="removeSelectedRow();">Remove</button>
             </div>
         </div>
+		<script>
+			var rIndex;
+var table = document.getElementById("table");
+// check the empty input
+function checkEmptyInput(){
+     var isEmpty = false,
+     fname = document.getElementById("fname").value,
+     lname = document.getElementById("lname").value,
+
+     if(fname === ""){
+          alert("First Name Connot Be Empty");
+          isEmpty = true;
+     }
+     else if(lname === ""){
+          alert("Last Name Connot Be Empty");
+          isEmpty = true;
+     }
+     return isEmpty;
+ }
+
+function addHtmlTableRow() {
+// get the table by id
+// create a new row and cells
+// get value from input text
+// set the values into row cell's
+     if(!checkEmptyInput()){
+          var newRow = table.insertRow(table.length),
+          cell1 = newRow.insertCell(0),
+          cell2 = newRow.insertCell(1),
+          fname = document.getElementById("fname").value,
+          lname = document.getElementById("lname").value,
+
+           cell1.innerHTML = fname;
+           cell2.innerHTML = lname;
+           // call the function to set the event to the new row
+           selectedRowToInput();
+     }
+}
+
+// display selected row data into input text
+function selectedRowToInput() {
+     for(var i = 1; i < table.rows.length; i++) {
+          table.rows[i].onclick = function() {
+               // get the seected row index
+               rIndex = this.rowIndex;
+               document.getElementById("fname").value = this.cells[0].innerHTML;
+               document.getElementById("lname").value = this.cells[1].innerHTML;
+               };
+          }
+}
+
+//runs the function
+selectedRowToInput();
+
+function editHtmlTbleSelectedRow() {
+     var fname = document.getElementById("fname").value,
+     lname = document.getElementById("lname").value,
+          if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = fname;
+                table.rows[rIndex].cells[1].innerHTML = lname;
+              }
+}
+
+function removeSelectedRow() {
+     table.deleteRow(rIndex);
+     // clear input text
+     document.getElementById("fname").value = "";
+     document.getElementById("lname").value = "";
+}
+
+		</script>
     </body>
 </html>

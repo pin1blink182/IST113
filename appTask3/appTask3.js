@@ -35,7 +35,7 @@ function pageLoad() {
           addToDOM(taskDescription);
 
           //  Add the task to the array
-          taskItems.push(taskDescription);
+          tItems.push(taskDescription);
 
           //  Call the savetasks fucntion to save the array to local storage
           saveTasks();

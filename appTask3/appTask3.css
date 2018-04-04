@@ -4,29 +4,35 @@
   padding: 0px;
   border: 0px;
 }
+
 /*  Center the main window in the browser*/
 #appMainWindow {
-  width: 45%;
-  background-color: green;
-  margin-top: 25%;
-  margin-left: 25%;
+    width: 45%;
+    background-color: green;
+    margin-top: 25%;
+    margin-left: 25%;
 }
+
 #title {
-  text-align: center;
+    text-align: center;
 }
-fieldset {
-  margin-top: 2%;
-  border: 1px solid black;
-  width: 98%;
-}
+
 #taskHeader {
   margin-top: 2%;
 }
+
 #buttonAddTask {
   margin-left: 5%;
 }
+
 #buttonDeleteAll {
   margin-left: 5%
+}
+
+fieldset {
+    margin-top: 2%;
+    border: 1px solid black;
+    width: 98%;
 }
 
 button {

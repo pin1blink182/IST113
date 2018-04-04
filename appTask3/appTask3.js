@@ -12,7 +12,7 @@ function pageLoad() {
           let tString = localStorage.getItem(tKey);
 
           //  Parses string items into an array
-          taskItems = JSON.parse(tString);
+          tItems = JSON.parse(tString);
 
           // Adds the array to the DOM storage array
           $(tItems).each(function() {

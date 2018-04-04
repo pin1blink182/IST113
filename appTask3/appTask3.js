@@ -71,7 +71,7 @@ function removeTask(task) {
 
      //  Remove task from array at point INDEX so long as it is actually there
      if(index != -1) {
-          taskItems.splice(index, 1);
+          tItems.splice(index, 1);
 
           //  Save the "new" array
           saveTasks();

@@ -16,7 +16,7 @@ function pageLoad() {
 
           // Adds the array to the DOM storage array
           $(tItems).each(function() {
-               addItemToDOM(this);
+               addToDOM(this);
           });
      }// end if statement
 
@@ -32,7 +32,7 @@ function pageLoad() {
           let taskDescription = $('#taskDescription').val();
 
           //  Call the function to add the item to the DOM
-          addItemToDOM(taskDescription);
+          addToDOM(taskDescription);
 
           //  Add the task to the array
           taskItems.push(taskDescription);
@@ -99,7 +99,7 @@ function saveTasks() {
      let taskString = JSON.stringify(taskItems);
 
      //  Add the item to the storage array
-     localStorage.setItem(taskKey, taskString);
+     localStorage.setItem(tKey, taskString);
 }//  End function saveTasks
 
 //  Call the pageLoad function once the page is loaded

@@ -8,9 +8,10 @@
 /*  Center the main window in the browser*/
 #appMainWindow {
     width: 45%;
-    background-color: green;
+    background-color: purple;
     margin-top: 25%;
     margin-left: 25%;
+    border-radius: 25px;
 }
 
 #title {
@@ -37,6 +38,7 @@ fieldset {
 
 button {
   margin-left: 5%;
+  border-radius: 15px;
 }
 
 li {

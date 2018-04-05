@@ -7,7 +7,7 @@
 
 /*  Center the main window in the browser*/
 #appMainWindow {
-    width: 45%;
+    width: 60%;
     background-color: purple;
     margin-top: 25%;
     margin-left: 25%;
@@ -23,12 +23,21 @@
   margin-top: 2%;
 }
 
-#buttonAddTask {
+#buttonStuff {
   margin-left: 5%;
+  width: 50%;
 }
 
-#buttonDeleteAll {
-  margin-left: 5%
+#taskDescription {
+     width: 50%;
+     margin-left: 25%;
+}
+
+#taskHeader {
+     margin-left: 10px;
+}
+
+#taskList {
 }
 
 fieldset {

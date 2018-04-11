@@ -1,0 +1,52 @@
+h1 {
+  width: 100%;
+  text-align: center;
+
+
+}
+h2 {
+  width: 50%;
+  text-align: center;
+  float: left;
+}
+tr {
+  width: 15px;
+  height: 5px;
+  border: solid 1px black;
+}
+
+th {
+  width: 15px;
+  height: 15px;
+  width: 15px;
+  height: 15px;
+  border: solid 1px black;
+}
+
+table {
+  margin: auto;
+}
+
+#btnPlay {
+  margin: 0 auto;
+}
+
+#namebox {
+
+}
+
+#scorebox {
+
+}
+
+#gridSquare {
+
+}
+
+#btnRetry {
+
+}
+
+#btnExit {
+
+}

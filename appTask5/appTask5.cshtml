@@ -1,0 +1,48 @@
+@{ }
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Task Manager 5</title>
+    <link href='appTask5.css' rel='Stylesheet' />
+  </head>
+  <body>
+    <div id='appMainWindow'>
+      <h1 id='title'>Task Manager 5</h1>
+      <fieldset>
+        <label>Task description</label>
+        <br/>
+        <input id='taskDescription' name='taskDescription' type='text' />
+        <br/>
+        <div id=buttonStuff>
+             <button id='buttonAddTask'>Add Task</button>
+             <button id='buttonDeleteAll'>Delete all</button>
+        </div>
+      </fieldset>
+
+      <h3 id='taskHeader'>Task List:</h3>
+
+      <ul id='taskList'></ul>
+
+    </div>
+
+    <div id="myForm">
+      <form action='' method='post' class='speaker-form'>
+          <br/>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="JohnDoe@gmail.com">
+        </div>
+      </form>
+    </div>
+    <p id="myFormButton">Contact</p>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='appTask5.js'></script>
+
+    </body>
+</html>

@@ -13,22 +13,25 @@
     <h2>Player 2</h2>
 
     <div class="btnPlay">
+
+      <script class="gridSquare">
+           var table = ' ';
+           var rows = 6;
+           var cols = 6;
+           for(var r = 1; r < rows; r++) {
+                table += '<tr>';
+                     for(var c = 1;c < cols; c++) {
+                          table += '<td>' + c + '</td>';
+                     }
+                     table += '<tr>';
+           }
+           document.write('<table border=1>' + table + '</table>');
+      </script>
+
       <button type="button" name="btnPlay" class="btnPlay">PLAY</button>
     </div>
 
-    <script class="gridSquare">
-         var table = ' ';
-         var rows = 6;
-         var cols = 6;
-         for(var r = 1; r < rows; r++) {
-              table += '<tr>';
-                   for(var c = 1;c < cols; c++) {
-                        table += '<td>' + c + '</td>';
-                   }
-                   table += '<tr>';
-         }
-         document.write('<table border=1>' + table + '</table>');
-    </script>
+
 
 
   </body>

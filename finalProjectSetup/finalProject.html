@@ -12,10 +12,20 @@
     <h2>Player 1</h2>
     <h2>Player 2</h2>
 
-    <div class="btnPlay">
+    <div class="nameBox1">
+      <input type="text" value="Player 1 Name" />
+      <input type="text" value="Player 1 Score">
+    </div>
 
-      <script class="gridSquare">
-           var table = ' ';
+    <div class="nameBox2">
+      <input type="text" value="Player 2 Name" />
+      <input type="text" value="Player 2 Score">
+    </div>
+
+    <div class="wrapper">
+
+      <script>
+           var table = '';
            var rows = 6;
            var cols = 6;
            for(var r = 1; r < rows; r++) {
@@ -28,7 +38,7 @@
            document.write('<table border=1>' + table + '</table>');
       </script>
 
-      <button type="button" name="btnPlay" class="btnPlay">PLAY</button>
+      <input type="button" value="PLAY" class="btnPlay"></input>
 
     </div>
 

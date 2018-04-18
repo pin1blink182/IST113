@@ -27,20 +27,30 @@ table {
   margin: auto;
 }
 
-#btnPlay {
+.btnPlay {
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper {
+  text-align:center;
+}
+
+.nameBox1 {
+  float: left;
+  width: 50%;
   text-align: center;
 }
 
-#namebox {
-
+.nameBox2 {
+  float: left;
+  width: 50%;
+  text-align: center;
 }
 
-#scorebox {
-
-}
-
-#gridSquare {
-
+.gridSquare {
+  height: 50%;
+  width: 50%;
 }
 
 #btnRetry {

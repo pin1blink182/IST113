@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -13,13 +12,13 @@
     <h2>Player 2</h2>
 
     <div class="nameBox1">
-      <input type="text" value="Player 1 Name" />
-      <input type="text" value="Player 1 Score">
+      <input id="player1Name" type="text" value="Player 1 Name" />
+      <input id="player1Score" type="text" value="Player 1 Score">
     </div>
 
     <div class="nameBox2">
-      <input type="text" value="Player 2 Name" />
-      <input type="text" value="Player 2 Score">
+      <input id="player2Name" type="text" value="Player 2 Name" />
+      <input id="player2Score" type="text" value="Player 2 Score">
     </div>
 
     <div class="wrapper">
@@ -38,12 +37,14 @@
            document.write('<table border=1>' + table + '</table>');
       </script>
 
-      <input type="button" value="PLAY" class="btnPlay"></input>
+      <input id="btnPlay" type="button" value="PLAY" class="btnPlay"></input>
 
     </div>
 
 
-
+    <!--  I need to put jquery in here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="finalProject.js"></script>
 
   </body>
 </html>

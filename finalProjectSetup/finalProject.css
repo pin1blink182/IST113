@@ -1,9 +1,8 @@
 h1 {
   width: 100%;
   text-align: center;
-
-
 }
+
 h2 {
   width: 50%;
   text-align: center;
@@ -28,18 +27,38 @@ table {
   margin: auto;
 }
 
+body {
+  height: 600px;
+}
+
+tbody {
+
+}
+
 #background{
   background:url(bg1.png);
-  background-size: 100% 500%;
+  background-size: 100% 400%;
+}
+
+#itemFrame{
+  height: 40px;
+  width: 40px;
+  padding: 20px;
+  border: 5px solid black;
+  display: block;
+  margin: auto;
+}
+.pond{
+  border: solid 1px;
+  bottom: 30px;
+  background-color: blue;
+  background:url(download.png);
+  bottom: 10px;
 }
 
 .btnPlay {
   display: block;
   margin: 0 auto;
-}
-
-.wrapper {
-  text-align:center;
 }
 
 .nameBox1 {

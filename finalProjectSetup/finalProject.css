@@ -6,6 +6,8 @@ h1 {
 h2 {
   width: 50%;
   text-align: center;
+  align-items: center;
+  float: right;
 }
 
 tr {
@@ -29,10 +31,6 @@ body {
   height: 600px;
 }
 
-tbody {
-  background: url(download.png);
-}
-
 #tbody1 {
   background: url(waves.png);
 }
@@ -49,6 +47,8 @@ tbody {
   border: 5px solid black;
   display: block;
   margin: auto;
+  background:url(Grid_Raw_Bass.png);
+  background-size: 100%;
 }
 .div1 {
   height: 400px;
@@ -58,8 +58,9 @@ tbody {
   border: solid 1px;
   bottom: 30px;
   background-color: blue;
-  background:url(download.png);
+  background:url(waves.png);
   bottom: 10px;
+  border-radius: 30px;
 }
 
 .btnPlay {

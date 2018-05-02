@@ -22,15 +22,26 @@ let playerCurrent = players[0];
 let scoreCurrent = 0;
 let player;
 let turn = 0;
+let playerNumber = 0;
+let player1High = 0;
+let player2High = 0;
+let playAgain = false;
 
 //  Initial page load functions, set up the UI
 function pageLoad() {
+  //  Reset variables in the event of a new game
+  scoreCurrent = 0;
+  turn = 0;
+  playerNumber = 0;
+  player1High = 0;
+  player2High = 0;
   //  Look for any data stored in local storage
   /*if(localStorage.getItem(playerKey) !== null) {
     //  Load in user string using key
     console.log("we got data!!");// Debug code
     let playerString = localStorage.getItem(playerKey);
     playerString = JSON.parse(playerString);
+
     $(playerString).each(function() {
       console.log(this);//  Debug code
       //addPlayersToGame(this);--add this function later
@@ -59,16 +70,40 @@ function goFish() {
 
   $("td").on("click", function() {
     castLine();
+    turn ++;
+
+    if(playerNumber == 1 && turn == 4) {
+      alert(player1High + " P1 " + player2high + " P2");
+      if(player1High > player2High) {
+        alert("Player 1 wins with a score of " + player1High);
+      } else if (player2High > player1High) {
+        alert("Player 2 wins with a score of " + player2high);
+      } else {
+        alert("It's a tie!!!");
+      }
+      if(confirm("Play agian?")) {
+        pageLoad();
+      }
+    }
+
+    if(turn >= 4 && playerNumber != 1) {
+      //  Switch to player 2(playerNumber 1) and reset turn count
+      playerNumber = 1;
+      turn = 0;
+      scoreCurrent = 0;
+      alert("Player 2 FISH!!");
+    }
+
   });//  End click events fish from grid
 }
 
 function setPlayers() {
-  let playerNumber;
   for(playerNumber = 0; playerNumber < 2; playerNumber++) {
     let playerName = getPlayerName(playerNumber + 1);
     players.push(playerName);
     addPlayerToGame(playerNumber, playerName);
   }
+  playerNumber = 0;//  Reset player number for later use
   //  Store players in local storage
   savePlayers();
 }//  End function setPlayers
@@ -87,14 +122,8 @@ function castLine() {
       break;
     default:
       getFish();
-
-      turn ++;
-      console.log(turn);
-
   }
-  //player1TurnCount++;
-  //console.log(player1TurnCount)
-};//  End function castLine
+}//  End function castLine
 
 //  the setPlayer function
 function savePlayers() {
@@ -119,7 +148,6 @@ function addPlayerToGame(playerNumber, playerName) {
 function getFish() {
   //  Generate random number for size of fish (4-24)
   let fishSize = Math.floor((Math.random() * 20) + 4);
-  console.log(fishSize);//  Debug code
 
   //  Generate a random number to pull a fish from the fishes array
   let index = Math.floor((Math.random() * 4));
@@ -128,7 +156,7 @@ function getFish() {
   //console.log(fishType);//  Debug code
 
   displayCatch(fishType, fishSize);
-  updateScore (fishSize);
+  updateScore (fishSize, playerNumber);
 }
 
 function getJunk() {
@@ -152,18 +180,22 @@ function displayCatch(type, size) {
 function updateScore(size) {
   if (size > scoreCurrent) {
     scoreCurrent = size;
-    console.log(scoreCurrent);//  Debug codep
-    //$("#player1Score").val(scoreCurrent);
-    setScore(scoreCurrent);
+    setScore(scoreCurrent, playerNumber);
   }
 }//  End function updateScore
 
-function setScore(scoreCurrent) {
+function setScore(scoreCurrent, playerNumber) {
+  if(playerNumber == 0) {
   $("#player1Score").val(scoreCurrent);
+  player1High = scoreCurrent;
+}
+  if(playerNumber == 1) {
+  $("#player2Score").val(scoreCurrent);
+  player2high = scoreCurrent;
+}
 }
 //  the getPlayerName function
 function getPlayerName(playerNumber) {
   let name = prompt("Player " + playerNumber + " enter your name")
   return name;
 }
-/*ADD A CHANCE TO CATCH A PENGUID, IF CAUGHT IT EATS ALL YOUR FISH AND YOU GET A ZERO*/

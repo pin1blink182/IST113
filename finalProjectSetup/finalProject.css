@@ -9,9 +9,7 @@ h2 {
   text-align: center;
   float: left;
 }
-h3{
-  width: 25%;
-}
+
 tr {
   width: 15px;
   height: 5px;
@@ -28,6 +26,11 @@ th {
 
 table {
   margin: auto;
+}
+
+#background{
+  background:url(bg1.png);
+  background-size: 100% 500%;
 }
 
 .btnPlay {
